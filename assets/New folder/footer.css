@@ -1,0 +1,35 @@
+/* 🔸 Footer Star Container */
+#footer-stars {
+    position: fixed;  /* Fixed position so that stars always stay in place */
+    bottom: 0;  /* Keep it at the bottom of the page */
+    width: 100%;
+    height: 100px;  /* Adjust the height of the stars container */
+    overflow: hidden;  /* Hide any extra stars outside of the container */
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* 🔸 Star style */
+  .footer-star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 0.6;
+    background-color: white;
+    animation: footerTwinkle 3s infinite ease-in-out;
+  }
+  
+  /* 🔸 Twinkle animation */
+  @keyframes footerTwinkle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.7);
+      opacity: 1;
+    }
+  }
+  

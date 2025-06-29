@@ -1,0 +1,19 @@
+#visitor-count-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.visitor-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visitor-box i {
+  font-size: 1.2rem;
+  color: var(--first-color);
+}

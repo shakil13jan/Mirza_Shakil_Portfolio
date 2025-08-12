@@ -7,23 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const todayCountEl = document.getElementById("today-count");
   const totalCountEl = document.getElementById("total-count");
 
-  // শুধুমাত্র নতুন ট্যাবের জন্য গণনা (রিফ্রেশ বাদে)
+  // Not work on refresh page
   if (!sessionStorage.getItem(visitedKey)) {
-    // আজকের ভিজিট গণনা
+    // Dailt Visit COunt
     let todayCount = parseInt(localStorage.getItem(todayStorageKey)) || 0;
     todayCount++;
     localStorage.setItem(todayStorageKey, todayCount);
 
-    // মোট ভিজিট গণনা
+    // Total Visit Count
     let totalCount = parseInt(localStorage.getItem(totalKey)) || 0;
     totalCount++;
     localStorage.setItem(totalKey, totalCount);
 
-    // সেশন মার্ক করা যাতে রিফ্রেশে না বাড়ে
+    
     sessionStorage.setItem(visitedKey, "true");
   }
 
-  // দেখানো অংশ
+
   todayCountEl.textContent = localStorage.getItem(todayStorageKey) || 0;
   totalCountEl.textContent = localStorage.getItem(totalKey) || 0;
 });
